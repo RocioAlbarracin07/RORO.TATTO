@@ -1,0 +1,273 @@
+.top_bar {
+    width: 100vw;
+    /* ocupa todo el ancho de la ventana */
+    height: 5px;
+    background-color: #ff4d4d;
+    position: relative;
+    left: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container_header{
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-left: 80px;
+    padding: 40px;
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container_header {
+    max-width: 1200px;
+    /* o el valor que quieras */
+    width: 100%;
+    margin-top: center;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 250px;
+}
+
+.menu nav ul {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+}
+
+.menu nav ul li {
+    list-style: none;
+    padding: 0px 20px;
+}
+
+.menu nav ul li a {
+    text-decoration: none;
+    font-size:25px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menu nav ul li a:hover {
+    opacity: 0.6;
+
+}
+marquee h2 {
+  color: rgb(87, 2, 54);
+}
+
+.btn_register {
+    padding: 14px 30px;
+    border: none;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn_register:hover {
+    background-color: rgb(234, 127, 255);
+    color: black;
+}
+
+main {
+    max-width: 1200px;
+    height: 150vh;
+    padding: 40px;
+
+}
+
+footer {
+    background-color: #020202;
+    color: #1e293b;
+    padding: 10px 20px 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    display: block;
+}
+
+/* grid */
+.footer_grid {
+    display: grid;
+    grid-template-columns: repeat(2);
+    grid-template-areas:
+        "marca navegacion productos contacto"
+        "newsletter newsletter newsletter newsletter";
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0px;
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* areas*/
+.marca {
+    grid-area: marca;
+}
+
+.navegacion {
+    grid-area: navegacion;
+}
+
+.contacto {
+    grid-area: contacto;
+    
+}
+
+.newsletter {
+    grid-area: newsletter;
+}
+
+.marca h2 {
+    color: rgb(139, 40, 139);
+    margin-bottom: 10px;
+}
+
+.marca p {
+    font-size: 18px;
+    line-height: 2;
+    color: #fcfcfc;
+    font-family: 'Franklin Gothic regular';
+    
+}
+/*navegacion*/
+.navegacion h3, .productos h3, .contacto h3, .newsletter h3 {
+    margin-bottom: 15px;
+    color: rgb(169, 19, 169);
+}
+
+.navegacion ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navegacion ul li {
+    margin-bottom: 10px;
+}
+
+.navegacion ul li a {
+    text-decoration: none;
+    color: #a51f98;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.navegacion ul li a:hover {
+    color: rgb(96, 4, 255);
+    font-size: 18px;
+}
+
+/* productos*/
+.productos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.productos ul li {
+    margin-bottom: 10px;
+}
+
+.productos ul li a {
+    text-decoration: none;
+    color: #a51f98;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.productos ul li a:hover {
+    color: rgb(96, 4, 255);
+    font-size: 18px;
+}
+
+/* contacto*/
+.contacto p {
+    font-size: 18px;
+    color: #fcfcfc;
+    font-family:'Franklin Gothic regular';
+}
+
+/*newsletter */
+.newsletter {
+    background-color: rgb(255, 255, 255);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(143, 8, 125, 0.397);
+}
+
+.newsletter form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-top: 10px;
+}
+
+.newsletter input {
+    padding: 12px;
+    border: none;
+    outline: none;
+    border-radius: 8px 0 0 8px;
+}
+
+.newsletter button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #020202;
+    color: #4a07a2;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.newsletter button:hover {
+    background-color: #58076a;
+    color: #cacaca;
+}
+
+.copy {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid rgb(255, 255, 255);
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fafafa;
+}
+
+/* RESPONSIVE--> HACER QUE EL SITIO SE VEA EN TODOS LOS DISPOSITIVOS */
+
+@media(max-width: 900px) {
+    .footer_grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "marca marca"
+            "navegacion navegacion"
+            "productos productos"
+            "contacto contacto"
+            "newsletter newsletter"
+        ;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer_grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "marca "
+            "navegacion"
+            "productos"
+            "contacto"
+            "newsletter"
+        ;
+    }
+}
